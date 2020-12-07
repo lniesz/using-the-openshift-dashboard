@@ -11,7 +11,7 @@ public class FrontendController {
 
 	@GetMapping
 	public String returnHelloMessage() throws InterruptedException {
-		String podName = restTemplate.getForObject("http://backend-service-port:8080", String.class);
+		String podName = restTemplate.getForObject("http://backend-service:8080", String.class);
 		return "Hello, " + podName;
 	}
 }
